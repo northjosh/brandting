@@ -1,0 +1,418 @@
+$background :#160040;
+$primary:#9A0680;
+$secondary:#79018C;
+$tertiary:#4C0070;
+$primary-font: "Ubuntu";
+
+*, ::before, ::after{
+    box-sizing: content-box;
+    margin: 0px;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    // margin: 0px;
+    text-align: center;
+    background-color: white;
+    color: $primary;
+    overflow-x: hidden;
+    font-family:$primary-font ;
+    // background-image: url('/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg');
+    
+}
+section{
+    padding: 50px;
+}
+section>div{
+    margin-top: 10px;
+}
+.grr{
+    background-image: url("/images/widit.jpg"),;
+    width: 100%;
+    height:800px;
+    overflow-x:hidden;
+    background-size: cover;
+
+    
+
+}
+.wrapper{
+    margin-top: 20px;
+    // position: fixed;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: left;
+    // background-color: #121222;
+    
+    .brand{
+        align-items: center;
+        display: flex;
+        margin-right: 5px;
+        
+        a{
+            text-decoration: none;
+        }
+        .logo{
+            height: 64px;
+            width: 64px;
+            color: #d1553f;
+
+        }
+    
+    }
+
+   
+
+}
+ .links {
+        text-decoration: none;
+        font-size: 1.2rem;
+        // display: inline;
+        
+        a{
+            text-decoration: none;
+            color: #d1553f;
+            margin: 0 10px;
+
+        }
+        
+        a:hover{
+            // padding-bottom: 20px;
+            border-bottom: 10px solid red;
+            color:green;    
+        }
+    }
+
+.home-container{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    // margin: auto;
+    padding: 10px 20px;
+}
+.puzzle .word {
+    display: flex;
+    font-family: "Ubuntu", sans-serif;
+    max-width: 1000px;
+}
+
+.puzzle .word .letter {
+    width: 2em;
+    height: 2em;
+    font-size: 2rem;
+    margin: 0.4rem;
+    border-radius: 3px;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    user-select: none;
+    animation: align 6s ease-in-out;
+    animation-fill-mode: forwards;
+    position: relative;
+    order: 2;
+    /* right: 50%; */
+}
+
+.puzzle .word .letter:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    opacity: 0.7;
+    vertical-align: middle;
+    /* display: none; */
+
+}
+
+.puzzle .word .letter:last-child {
+    margin-right: auto;
+}
+
+
+
+
+.puzzle .word .pivot,
+.puzzle .word .pivot~.letter {
+    animation: last-straw 3s linear;
+    animation-fill-mode: forwards;
+    order: 1;
+    /* left: 50%; */
+
+
+}
+
+.puzzle .word .pivot {
+    /* background-color: #75a987; */
+    animation: cols 6s ease-in-out, last-straw 3s linear;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes align {
+
+    20% {
+        right: 10%;
+    }
+
+    40% {
+        right: 10%;
+    }
+
+    60% {
+        right: 10%;
+    }
+
+    80% {
+        right: 10%;
+    }
+
+    100% {
+        position: relative;
+        order: 2;
+        right: 50%;
+    }
+
+
+}
+
+@keyframes last-straw {
+    20% {
+        left: 10%;
+
+    }
+
+    40% {
+        left: 10%;
+
+    }
+
+    60% {
+        left: 10%;
+
+    }
+
+    80% {
+        left: 10%;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+
+@keyframes cols {
+    50% {
+        background-color: rgb(202, 6, 6);
+    }
+
+    80% {
+        background-color: #75a987;
+        z-index: 1;
+    }
+
+    100% {
+        background-color: #75a987;
+
+    }
+
+
+
+}
+
+.code-img{
+    width: 100%;
+   
+}
+
+#about{
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: #121222;
+    color: white;
+    
+}
+
+
+
+.frameworks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+.framework-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.skills{
+    justify-self: center;
+    width: 100%;
+    padding: 0 20px;
+    text-align: left;
+    align-items: center;
+
+    .skill{
+        margin: 10px;
+    }
+
+
+    .skill-name{
+        font-size:18px ;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0px 0; 
+        // animation: pop 0.3;
+    }
+
+    .skill-name:hover{
+        animation: pop 0.3s linear forwards alternate;
+    }
+    
+    .skill-per{
+        height: 8px;
+        background: linear-gradient(to right, red, blue,purple );
+        border-radius: 3px;
+        position: relative;
+        animation: fillBars 5s ;
+        
+    }
+
+    .skill-per::before{
+        content: attr(per);
+        position: absolute;
+        padding: 4px 6px;
+        border-radius: 4px;
+    }
+
+    // .skill-per::after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 10px;
+    //     height: 10px;
+    //     background: purple;
+    //     top:-20px;
+    //     right: 0;
+    //     transform: translateX(50%) rotate(45deg);
+    //     border-radius: 2px;
+    // }
+
+    @keyframes pop {
+        0%{
+            padding-left: 0;
+        }
+        100%{
+            padding-left:20px ;
+        }
+        
+    }
+
+    @keyframes fillBars{
+        from{
+            width:0;
+        }
+        to{
+            width:100%
+        }
+    }
+
+   
+}
+
+
+#projects{
+    background-color: #d1553f;
+    color: #121222;
+    div{
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0px;
+
+        div{
+            margin: 0 10px;
+        }
+    }
+    
+    div:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+}
+.fa-github{
+    color: white;
+}
+
+
+.btn{
+    a{
+        color: white;
+    }
+    
+}
+.source{
+    background-color: black;
+    
+    align-content: center;
+    background: 
+    linear-gradient(black, black) padding-box,
+    linear-gradient(to right, darkblue, darkorchid) border-box;
+    border: 4px solid transparent;
+    border-radius:16rem;
+    a {
+        text-decoration: none;
+ 
+     }
+}
+.live{
+    background: 
+    linear-gradient(black, black) padding-box,
+    linear-gradient(to right, darkblue, darkorchid) border-box;
+    border: 4px solid transparent;
+    color: white;
+    border-radius:16rem;
+   a {
+       text-decoration: none;
+
+    }
+}
+
+ 
+ 
+
+
+#call-to-action{
+    background-color: #121222;
+    font-size: 2rem;
+
+    button.cta{
+        color:#4C0070
+    }
+}
+
+#footer{
+background-color: #d1553f;
+
+    .foooter-links{
+        margin:10px;
+
+
+    }
+    .footer-text{
+        color:#121222;
+        font-size: 1.2rem;
+    }
+}
+.footer-ico{
+    margin: 10px;
+    color:#121222;
+}
+
+
+
