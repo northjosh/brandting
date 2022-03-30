@@ -33,6 +33,7 @@ section > div {
 }
 
 .wrapper {
+  z-index: 2;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,11 +79,11 @@ section > div {
 }
 
 .links a:hover {
-  border-bottom: 10px solid red;
-  color: green;
+  border-bottom: 3px solid #d1553f;
 }
 
 .home-container {
+  z-index: 2;
   margin-top: 100px;
   display: -ms-grid;
   display: grid;
