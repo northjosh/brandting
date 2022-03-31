@@ -13,6 +13,13 @@ html{
     scroll-behavior: smooth;
 }
 
+h1, h2, h3, h4, h5 , h6{
+    font-family:"Montserrat", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
 body{
     // margin: 0px;
     text-align: center;
@@ -63,6 +70,7 @@ section>div{
             height: 64px;
             width: 64px;
             color: #d1553f;
+
 
         }
     
@@ -351,6 +359,10 @@ section>div{
 }
 .fa-github{
     color: white;
+    margin: 5px;
+}
+.fa-wifi{
+    margin:5px;
 }
 
 
@@ -362,7 +374,6 @@ section>div{
 }
 .source{
     background-color: black;
-    
     align-content: center;
     background: 
     linear-gradient(black, black) padding-box,
@@ -387,19 +398,64 @@ section>div{
     }
 }
 
- 
+//  testimonials
+#testimonial{
+    background-color: #121222;
+}
+.testimony{
+    width: 50%;
+    padding: 0 15px;
+    margin: auto;
+    
+    .info{
+        margin-bottom: 50px;
+    }
+}
+.carousel-indicators{
+    margin-top: 20px;
+
+}
+.carousel-contol-prev{
+    color:#160040
+}
+.carousel-contol-next{
+    color:#160040
+}
  
 
-
+// call to action
 #call-to-action{
     background-color: #121222;
     font-size: 2rem;
 
-    button.cta{
-        color:#4C0070
+    a{
+        color:#121222
+    }
+    .cta{
+        background-color:#d1553f;
+        margin-top: 50px;
+        border-radius: 8px;
+        border: none;
+        padding: 15px 18px;
+        
+        .fa-phone{
+            margin: 5px;
+        }
+    }
+
+    .cta:hover{
+        text-decoration: none;
+        background-color: white;
+
+    }
+
+    .strr{
+        font-size: 5rem;
+        line-height: 1.5;
+        margin-bottom:20px;
     }
 }
-
+// footer section
 #footer{
 background-color: #d1553f;
 
